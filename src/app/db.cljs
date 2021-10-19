@@ -1,4 +1,5 @@
-(ns app.db)
+(ns app.db
+  (:require [re-frame.core :as rf]))
 
 (def initial-app-db {:auth {:uid nil}
                      :errors {}
@@ -28,8 +29,8 @@
                                                      {:message "fourth message"
                                                       :author "mike@mailinator.com"
                                                       :created-at 1544414386378}]}}
-                     :nav {:active-page :recipes
-                           :active-nav :recipes
+                     :nav {:active-page :log-in
+                           :active-nav :log-in
                            :active-modal nil
                            :active-recipe nil
                            :active-inbox nil}
@@ -286,3 +287,8 @@
                                                     :inboxes {"mike@mailinator.com" {:id :inbox-02
                                                                                      :notifications 6
                                                                                      :updated-at 1538697210537}}}}})
+
+(rf/reg-event-db
+  :initialize-db
+  (fn [_ _]
+    initial-app-db))
