@@ -1,8 +1,11 @@
 (ns app.core
   (:require [reagent.core :as r]
+            [reagent.dom :as dom]
             [re-frame.core :as rf]
             [app.db]
     ;; -- auth --
+            [app.auth.events]
+            [app.auth.subs]
             [app.auth.views.profile :refer [profile]]
             [app.auth.views.sign-up :refer [sign-up]]
             [app.auth.views.log-in :refer [log-in]]
@@ -18,10 +21,6 @@
             [app.recipes.views.recipes :refer [recipes]]
             [app.theme :refer [cheffy-theme]]
             [app.components.core :as c]))
-;(rf/reg-sub
-;  :active-nav
-;  (fn [db _]
-;    (get-in db [:nav :active-nav])))
 
 
 (defn pages
@@ -33,7 +32,7 @@
     :recipes [recipes]
     :log-in [log-in]
     :sign-up [sign-up]
-    [log-in]))
+    [recipes]))
 
 
 (defn app
@@ -49,7 +48,7 @@
 (defn ^:dev/after-load start
   []
   (rf/dispatch [:initialize-db])
-  (r/render
+  (dom/render
     [app]
     (.getElementById js/document "app")))
 

@@ -23,10 +23,11 @@
 (defn public
   []
   (let [active-nav @(rf/subscribe [:active-nav])]
-    [:div {:class "flex justify-end py-1"}
-     (for [item nav-items]
-       ^{:key (:id item)}
-       [nav-item (assoc item :active-nav active-nav)])]))
+    (fn []
+      [:div {:class "flex justify-end py-1"}
+       (for [item nav-items]
+         ^{:key (:id item)}
+         [nav-item (assoc item :active-nav active-nav)])])))
 
 
 
