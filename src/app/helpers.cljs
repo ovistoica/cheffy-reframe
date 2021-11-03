@@ -22,3 +22,18 @@
             Math/floor
             int
             (#(str % " " (:name unit) (when (> % 1) "s") " ago")))))))
+
+
+;; Local storage
+
+(defn set-item-ls!
+  [key item]
+  (.setItem js/localStorage key (str item)))
+
+(defn remove-item-ls!
+  [key]
+  (.removeItem js/localStorage key))
+
+(defn get-item-ls
+  [key]
+  (.getItem js/localStorage key))

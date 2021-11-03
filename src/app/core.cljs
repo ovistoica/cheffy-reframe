@@ -39,8 +39,8 @@
   []
   (let [active-nav @(rf/subscribe [:active-nav])]
     [:<>
-     [:div.container.mx-auto
-      [:div
+     [:div.bg-gray-50.w-screen.h-screen
+      [:div.container
        [:div
         [nav]
         [pages active-nav]]]]]))

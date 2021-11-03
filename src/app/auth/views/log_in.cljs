@@ -1,5 +1,6 @@
 (ns app.auth.views.log-in
   (:require [app.components.page-nav :refer [page-nav]]
+            [app.components.core :refer [button]]
             [app.components.form :refer [form-group]]
             [reagent.core :as r]
             [re-frame.core :as rf]))
@@ -29,5 +30,5 @@
                    :class    "bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline transition-all"}
           "Sign In"]
          [:a.inline-block.align-baseline.font-bold.text-sm.text-green-500.hover:text-green-800.transition
-          {:href "#sign-up"
+          {:href     "#sign-up"
            :on-click #(rf/dispatch [:set-active-nav :sign-up])} "Sign Up"]]]])))
