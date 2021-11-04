@@ -860,8 +860,23 @@ select {
 	margin-top: 0.5rem;
 	margin-bottom: 0.5rem;
 }
+.mx-4 {
+	margin-left: 1rem;
+	margin-right: 1rem;
+}
+.mx-3 {
+	margin-left: 0.75rem;
+	margin-right: 0.75rem;
+}
+.mx-2 {
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+}
 .mb-4 {
 	margin-bottom: 1rem;
+}
+.mt-4 {
+	margin-top: 1rem;
 }
 .mr-2 {
 	margin-right: 0.5rem;
@@ -872,8 +887,8 @@ select {
 .ml-2 {
 	margin-left: 0.5rem;
 }
-.mt-4 {
-	margin-top: 1rem;
+.ml-4 {
+	margin-left: 1rem;
 }
 .block {
 	display: block;
@@ -919,9 +934,6 @@ select {
 }
 .w-screen {
 	width: 100vw;
-}
-.w-1\/2 {
-	width: 50%;
 }
 .max-w-sm {
 	max-width: 24rem;
@@ -1006,13 +1018,21 @@ select {
 	--tw-bg-opacity: 1;
 	background-color: rgba(229, 231, 235, var(--tw-bg-opacity));
 }
+.bg-red-400 {
+	--tw-bg-opacity: 1;
+	background-color: rgba(248, 113, 113, var(--tw-bg-opacity));
+}
 .bg-gray-50 {
 	--tw-bg-opacity: 1;
 	background-color: rgba(249, 250, 251, var(--tw-bg-opacity));
 }
-.bg-red-400 {
+.bg-red-200 {
 	--tw-bg-opacity: 1;
-	background-color: rgba(248, 113, 113, var(--tw-bg-opacity));
+	background-color: rgba(254, 202, 202, var(--tw-bg-opacity));
+}
+.bg-gray-100 {
+	--tw-bg-opacity: 1;
+	background-color: rgba(243, 244, 246, var(--tw-bg-opacity));
 }
 .p-10 {
 	padding: 2.5rem;
@@ -1036,6 +1056,14 @@ select {
 	padding-top: 2rem;
 	padding-bottom: 2rem;
 }
+.px-10 {
+	padding-left: 2.5rem;
+	padding-right: 2.5rem;
+}
+.py-4 {
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
 .px-3 {
 	padding-left: 0.75rem;
 	padding-right: 0.75rem;
@@ -1048,13 +1076,9 @@ select {
 	padding-top: 0.25rem;
 	padding-bottom: 0.25rem;
 }
-.px-10 {
-	padding-left: 2.5rem;
-	padding-right: 2.5rem;
-}
-.py-4 {
-	padding-top: 1rem;
-	padding-bottom: 1rem;
+.px-2 {
+	padding-left: 0.5rem;
+	padding-right: 0.5rem;
 }
 .pt-6 {
 	padding-top: 1.5rem;
@@ -1065,15 +1089,20 @@ select {
 .pb-2 {
 	padding-bottom: 0.5rem;
 }
-.pb-4 {
-	padding-bottom: 1rem;
-}
 .align-baseline {
 	vertical-align: baseline;
 }
 .text-sm {
 	font-size: 0.875rem;
 	line-height: 1.25rem;
+}
+.text-xl {
+	font-size: 1.25rem;
+	line-height: 1.75rem;
+}
+.text-2xl {
+	font-size: 1.5rem;
+	line-height: 2rem;
 }
 .font-bold {
 	font-weight: 700;
@@ -1198,7 +1227,29 @@ select {
 }
 @media (min-width: 768px) {
 
+	.md\:w-full {
+		width: 100%;
+	}
+
 	.md\:max-w-lg {
 		max-width: 32rem;
+	}
+}
+@media (min-width: 1024px) {
+
+	.lg\:w-1\/2 {
+		width: 50%;
+	}
+
+	.lg\:w-2\/3 {
+		width: 66.666667%;
+	}
+
+	.lg\:max-w-lg {
+		max-width: 32rem;
+	}
+
+	.lg\:max-w-2xl {
+		max-width: 42rem;
 	}
 }

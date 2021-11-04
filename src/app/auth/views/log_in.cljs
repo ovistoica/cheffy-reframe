@@ -3,7 +3,8 @@
             [app.components.core :refer [button]]
             [app.components.form :refer [form-group]]
             [reagent.core :as r]
-            [re-frame.core :as rf]))
+            [re-frame.core :as rf]
+            [app.router :as router]))
 
 
 (defn log-in
@@ -30,5 +31,5 @@
                    :class    "bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline transition-all"}
           "Sign In"]
          [:a.inline-block.align-baseline.font-bold.text-sm.text-green-500.hover:text-green-800.transition
-          {:href     "#sign-up"
-           :on-click #(rf/dispatch [:set-active-nav :sign-up])} "Sign Up"]]]])))
+          {:href     (router/path-for :sign-up)
+           :on-click #(rf/dispatch [:set-active-page :sign-up])} "Sign Up"]]]])))

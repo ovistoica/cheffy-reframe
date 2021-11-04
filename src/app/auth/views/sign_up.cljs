@@ -2,7 +2,8 @@
   (:require [app.components.page-nav :refer [page-nav]]
             [app.components.form :refer [form-group]]
             [reagent.core :as r]
-            [re-frame.core :as rf]))
+            [re-frame.core :as rf]
+            [app.router :as router]))
 
 
 (defn sign-up
@@ -45,5 +46,5 @@
          [:div.flex.items-center
           [:span.text-gray-500.mr-2 "Already have an account? "]
           [:a.inline-block.align-baseline.font-bold.text-sm.text-green-500.hover:text-green-800.transition
-           {:href "#sign-up"
-            :on-click #(rf/dispatch [:set-active-nav :log-in])} "Sign In"]]]]])))
+           {:href     (router/path-for :sign-up)
+            :on-click #(rf/dispatch [:set-active-page :log-in])} "Sign In"]]]]])))

@@ -3,6 +3,7 @@
             [reagent.dom :as dom]
             [re-frame.core :as rf]
             [app.db]
+            [app.router :as router]
     ;; -- auth --
             [app.auth.events]
             [app.auth.subs]
@@ -37,21 +38,22 @@
 
 (defn app
   []
-  (let [active-nav @(rf/subscribe [:active-nav])]
+  (let [active-page @(rf/subscribe [:active-page])]
     [:<>
-     [:div.bg-gray-50.w-screen.h-screen
-      [:div.container
+     [:div.bg-gray-100.w-screen.h-screen
+      [:div.container.mx-auto
        [:div
         [nav]
-        [pages active-nav]]]]]))
+        [pages active-page]]]]]))
 
 (defn ^:dev/after-load start
   []
-  (rf/dispatch [:initialize-db])
   (dom/render
     [app]
     (.getElementById js/document "app")))
 
 (defn ^:export init
   []
+  (router/start!)
+  (rf/dispatch-sync [:initialize-db])
   (start))
