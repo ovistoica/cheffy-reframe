@@ -1,79 +1,53 @@
-body {
-  color: #102A43;
-  background: #F0F4F8;
-}
+/* 5/7 base rules are converted successfully. */
+/* Gather results from the console with `copy(window.cssToTailwindResults)` */
 
-p {
-  line-height: 1.8;
-}
-
-::selection {
-  color: #FFF;
-  background: #27AB83;
-}
-
-a:link, a:visited, a:active {
-  text-decoration: none;
-  color: #334E68;
-}
-
-a:hover {
-  text-decoration: none;
-  color: #627D98;
-}
-
+/* ℹ️ Base selector: .img-card */
+/* ✨ TailwindCSS: "max-w-full" */
+/* ⚠️ Some properties could not be matched with Tailwind classes. Use @apply to extend a CSS rule: */
 .img-card {
+  @apply max-w-full;
   border-radius: 10px 10px 0px 0px;
-  max-width: 100%;
 }
 
-.img-circle {
-  border-radius: 50%;
-  max-width: 70px;
-  box-shadow: inset 0 0 0 1px hsla(0, 0%, 0%, .5);
-}
+/* ℹ️ Base selector: .img-circle */
+/* ❌ Could not match any TailwindCSS classes. */
 
-.img-circle-sm {
-  border-radius: 50%;
-  max-width: 35px;
-  box-shadow: inset 0 0 0 1px hsla(0, 0%, 0%, .5);
-}
+/* ℹ️ Base selector: .img-circle-sm */
+/* ❌ Could not match any TailwindCSS classes. */
 
+/* ℹ️ Base selector: .img-rounded */
+/* ✨ TailwindCSS: "w-full" */
+/* ⚠️ Some properties could not be matched with Tailwind classes. Use @apply to extend a CSS rule: */
 .img-rounded {
+  @apply w-full;
   border-radius: 50%;
-  width: 100%;
 }
 
+/* ℹ️ Base selector: .cards */
+/* ✨ TailwindCSS: "grid pb-12" */
+/* ⚠️ Some properties could not be matched with Tailwind classes. Use @apply to extend a CSS rule: */
 .cards {
-  display: grid;
+  @apply grid pb-12;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-gap: 20px;
-  padding-bottom: 50px;
 }
 
-.recipe-card, .inbox-card {
-  background: white;
+/* ℹ️ Base selector: .recipe-card, .inbox-card */
+/* ✨ TailwindCSS: "bg-white cursor-pointer" */
+/* ⚠️ Some properties could not be matched with Tailwind classes. Use @apply to extend a CSS rule: */
+.recipe-card,
+.inbox-card {
+  @apply bg-white cursor-pointer;
   border-radius: 10px;
-  box-shadow: 0 14px 28px -5px rgba(50,50,93,.25),
-              0 8px 16px -8px rgba(0,0,0,.3);
-  cursor: pointer;
+  box-shadow: 0 14px 28px -5px rgba(50, 50, 93, 0.25),
+  0 8px 16px -8px rgba(0, 0, 0, 0.3);
   transition-property: transform, box-shadow;
-  transition-duration: .30s;
+  transition-duration: 0.3s;
 }
 
-.recipe-card:hover, .inbox-card:hover {
-  box-shadow: 0 30px 60px -12px rgba(50,50,93,.25),
-              0 18px 36px -18px rgba(0,0,0,.3);
-  transform: translateY(-2px);
-}
-
+/* ℹ️ Base selector: .editable */
+/* ✨ TailwindCSS: "opacity-100" */
+/* ⚠️ Some properties could not be matched with Tailwind classes. Use @apply to extend a CSS rule: */
 .editable {
-  opacity: 1;
+  @apply opacity-100;
   transition: opacity 0.3s ease-in-out;
-}
-
-.editable:hover {
-  cursor: pointer;
-  color: #334E68;
-  opacity: 0.7;
 }

@@ -19,7 +19,8 @@
             [app.nav.events]
             [app.nav.subs :as nav-subs]
     ;; -- recipes --
-            [app.recipes.views.recipes :refer [recipes]]
+            [app.recipes.views.recipes-page :refer [recipes-page]]
+            [app.recipes.subs]
             [app.theme :refer [cheffy-theme]]
             [app.components.core :as c]))
 
@@ -30,10 +31,10 @@
     :inboxes [inboxes]
     :profile [profile]
     :become-a-chef [become-a-chef]
-    :recipes [recipes]
+    :recipes [recipes-page]
     :log-in [log-in]
     :sign-up [sign-up]
-    [recipes]))
+    [recipes-page]))
 
 
 (defn app

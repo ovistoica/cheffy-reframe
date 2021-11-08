@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.img-card {
+    @apply w-full object-cover;
+    height: 250px;
+}
+
+.img-rounded {
+    @apply w-full rounded;
+}
+
+.cards {
+    @apply grid pb-12 gap-4;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.recipe-card,
+.inbox-card {
+    @apply bg-white cursor-pointer rounded shadow-xl overflow-hidden;
+    transition-property: transform, box-shadow;
+}
+
+.editable {
+    @apply opacity-100 transition-opacity;
+}
