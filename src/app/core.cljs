@@ -22,6 +22,7 @@
             [app.recipes.views.recipes-page :refer [recipes-page]]
             [app.recipes.views.recipe-page :refer [recipe-page]]
             [app.recipes.subs]
+            [app.recipes.events]
             [app.theme :refer [cheffy-theme]]
             [app.components.core :as c]))
 

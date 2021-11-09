@@ -1025,15 +1025,17 @@ select {
 	--tw-bg-opacity: 1;
 	background-color: rgba(243, 244, 246, var(--tw-bg-opacity));
 }
-.bg-red-200 {
-	--tw-bg-opacity: 1;
-	background-color: rgba(254, 202, 202, var(--tw-bg-opacity));
-}
 .p-10 {
 	padding: 2.5rem;
 }
 .p-2 {
 	padding: 0.5rem;
+}
+.p-8 {
+	padding: 2rem;
+}
+.p-4 {
+	padding: 1rem;
 }
 .px-8 {
 	padding-left: 2rem;
@@ -1104,6 +1106,10 @@ select {
 	font-size: 1.5rem;
 	line-height: 2rem;
 }
+.text-xl {
+	font-size: 1.25rem;
+	line-height: 1.75rem;
+}
 .font-bold {
 	font-weight: 700;
 }
@@ -1152,6 +1158,14 @@ select {
 .text-gray-700 {
 	--tw-text-opacity: 1;
 	color: rgba(55, 65, 81, var(--tw-text-opacity));
+}
+.text-red-300 {
+	--tw-text-opacity: 1;
+	color: rgba(252, 165, 165, var(--tw-text-opacity));
+}
+.text-red-500 {
+	--tw-text-opacity: 1;
+	color: rgba(239, 68, 68, var(--tw-text-opacity));
 }
 .underline {
 	text-decoration: underline;
