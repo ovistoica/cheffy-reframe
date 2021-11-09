@@ -24,12 +24,11 @@
   []
   (pushy/start! history))
 
-(defn path-for
+(def path-for
   "Get the path for the screen-id or an error if it doesn't exist.
   Example:
   For route :profile => \"profile\""
-  [route]
-  (bidi/path-for routes route))
+  (partial bidi/path-for routes))
 
 
 (defn set-token!

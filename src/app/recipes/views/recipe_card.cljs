@@ -4,7 +4,7 @@
 
 (defn recipe-card
   [{:keys [name saved-count prep-time img id]}]
-  [:a.recipe-card.text-gray-600 {:href (router/path-for :recipes)}
+  [:a.recipe-card.text-gray-600 {:href (router/path-for :recipe :recipe-id id)}
    [:img.img-card {:src (or img "/img/placeholder.jpg")
                    :alt name}]
 

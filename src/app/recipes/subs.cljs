@@ -15,3 +15,9 @@
   (fn [db _]
     (let [recipes (vals (:recipes db))]
       (filter #(= (:public? % true)) recipes))))
+
+(reg-sub
+  :recipe
+  (fn [db _]
+    (let [recipe-id (get-in db [:nav :active-recipe])]
+      (get-in db [:recipes recipe-id]))))

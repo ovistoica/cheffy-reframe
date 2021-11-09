@@ -18,8 +18,13 @@
 
 .recipe-card,
 .inbox-card {
-    @apply bg-white cursor-pointer rounded shadow-xl overflow-hidden;
+    @apply bg-white cursor-pointer rounded shadow-xl overflow-hidden duration-300;
     transition-property: transform, box-shadow;
+}
+
+.recipe-card:hover, .inbox-card:hover {
+    @apply shadow-2xl;
+    transform: translateY(-2px);
 }
 
 .editable {

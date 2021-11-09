@@ -14,8 +14,12 @@
 
 (reg-event-db
   :route-changed
-  (fn [db [_ {:keys [handler]}]]
-    (assoc-in db [:nav :active-page] handler)))
+  (fn [db [_ {:keys [handler route-params]}]]
+    (let [recipe-id (:recipe-id route-params)]
+      (cond-> db
+              true (assoc-in [:nav :active-page] handler)
+              recipe-id (assoc-in [:nav :active-recipe] (keyword recipe-id))))))
+
 
 
 (reg-event-db

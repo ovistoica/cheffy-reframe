@@ -20,6 +20,7 @@
             [app.nav.subs :as nav-subs]
     ;; -- recipes --
             [app.recipes.views.recipes-page :refer [recipes-page]]
+            [app.recipes.views.recipe-page :refer [recipe-page]]
             [app.recipes.subs]
             [app.theme :refer [cheffy-theme]]
             [app.components.core :as c]))
@@ -32,6 +33,7 @@
     :profile [profile]
     :become-a-chef [become-a-chef]
     :recipes [recipes-page]
+    :recipe [recipe-page]
     :log-in [log-in]
     :sign-up [sign-up]
     [recipes-page]))
