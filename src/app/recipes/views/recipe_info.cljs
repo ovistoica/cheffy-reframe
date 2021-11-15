@@ -17,12 +17,13 @@
         [:div.flex.items-center
          [:div.text-red-500
           (if saved?
-            [heart-solid]
-            [heart-outline])]
+            [heart-solid {:class "h-5 w-5 text-red-500"}]
+            [(if can-save? :a :span)
+             {:href     "#"
+              :on-click #(when can-save?
+                           (rf/dispatch [:save-recipe id]))}
+             [heart-outline {:class "h-5 w-5 text-red-500"}]])]
          [:div.pl-1 saved-count]]
         [:div.flex.items-center.pl-6
-         [clock]
+         [clock {:class "h-5 w-5 text-gray-400"}]
          [:div.pl-1 prep-time " min"]]]])))
-
-
-

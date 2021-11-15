@@ -8,7 +8,7 @@
 
 (rf/reg-sub
   :active-user-profile
-  (fn [db _]
+  (fn               [db _]
     (let [uid (get-in db [:auth :uid])]
       (get-in db [:users uid :profile]))))
 

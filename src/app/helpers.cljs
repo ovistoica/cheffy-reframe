@@ -1,5 +1,7 @@
 (ns app.helpers
-  (:require [cljs-time.core :as t]))
+  (:require [cljs-time.core :as t]
+            [clojure.string :as string]
+            [goog.string :as gstring]))
 
 ;; https://stackoverflow.com/questions/32511405/how-would-time-ago-function-implementation-look-like-in-clojure
 (defn time-ago
@@ -37,3 +39,17 @@
 (defn get-item-ls
   [key]
   (.getItem js/localStorage key))
+
+;; Tailwind helpers
+(defn classes
+  "Join multiple classes into a single string.
+
+  Also filters falsy parameters"
+  [& classes]
+  (string/join " " (filter string? classes)))
+
+
+(defn unescape-html
+  [entities]
+  (gstring/unescapeEntities entities))
+

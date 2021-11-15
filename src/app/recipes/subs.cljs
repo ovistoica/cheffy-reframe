@@ -21,3 +21,17 @@
   (fn [db _]
     (let [recipe-id (get-in db [:nav :active-recipe])]
       (get-in db [:recipes recipe-id]))))
+
+(reg-sub
+  :ingredients
+  (fn [db _]
+    (let [recipe-id (get-in db [:nav :active-recipe])]
+      (vals (get-in db [:recipes recipe-id :ingredients])))))
+
+(reg-sub
+  :author?
+  (fn [db _]
+    (let [uid (get-in db [:auth :uid])
+          active-recipe (get-in db [:nav :active-recipe])
+          recipe (get-in db [:recipes active-recipe])]
+      (= (:cook recipe) uid))))

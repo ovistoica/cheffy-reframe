@@ -23,10 +23,18 @@
 }
 
 .recipe-card:hover, .inbox-card:hover {
-    @apply shadow-2xl;
+    @apply shadow-2xl ;
     transform: translateY(-2px);
 }
 
 .editable {
-    @apply opacity-100 transition-opacity;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.editable:hover {
+    cursor: pointer;
+
+    color: #334E68;
+    opacity: 0.7;
 }

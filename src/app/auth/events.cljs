@@ -4,14 +4,14 @@
             [cljs.reader :refer [read-string]]))
 
 (comment
+  (* 2 2)
 
 
   (dispatch [:set-active-nav :profile])
   (dispatch [:update-profile {:first-name "Gigel" :last-name "Stoica"}])
-  (read-string (h/get-item-ls "cheffy-user"))
+  (read-string (h/get-item-ls "cheffy-user")))
 
 
-  awd)
 
 (def cheffy-user-key "cheffy-user")
 

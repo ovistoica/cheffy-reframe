@@ -1,7 +1,8 @@
 (ns app.recipes.views.recipes-page
   (:require [app.components.page-nav :refer [page-nav]]
             [re-frame.core :as rf]
-            [app.recipes.views.recipe-list :refer [recipe-list]]))
+            [app.recipes.views.recipe-list :refer [recipe-list]]
+            [app.components.headless-ui :refer [disclosure disclosure-button disclosure-panel]]))
 
 (defn recipes-page
   []
